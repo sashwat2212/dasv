@@ -183,7 +183,7 @@ runs:
 
     - name: Upload SARIF to GitHub Code Scanning
       if: always() && inputs.upload-sarif == 'true' && hashFiles(inputs.sarif-file) != ''
-      uses: github/codeql-action/upload-sarif@v3
+      uses: github/codeql-action/upload-sarif@v4
       with:
         sarif_file: ${{ inputs.sarif-file }}
 
